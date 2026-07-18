@@ -7,7 +7,11 @@ class Blueski < Formula
   head "https://github.com/looskis/blueski.git", branch: "main"
 
   depends_on "rust" => :build
-  depends_on macos: :monterey
+  depends_on :macos
+
+  on_macos do
+    depends_on macos: :monterey
+  end
 
   def install
     system "cargo", "install", *std_cargo_args
