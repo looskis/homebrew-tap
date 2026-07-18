@@ -1,8 +1,8 @@
 class Blueski < Formula
   desc "AppleScript-only macOS Messages send/receive daemon"
   homepage "https://github.com/looskis/blueski"
-  url "https://github.com/looskis/blueski/releases/download/v0.1.1/blueski-0.1.1.tar.gz"
-  sha256 "db1da7e0630c83271ff8419b268566c9295b187c11aa9ce8be5e5a0308aa13d0"
+  url "https://github.com/looskis/blueski/releases/download/v0.1.2/blueski-0.1.2.tar.gz"
+  sha256 "3e518dca4165d6064f38bd3653feee059e2c3e54ac1f31e8f766f4e9c7401635"
   license "MIT"
   head "https://github.com/looskis/blueski.git", branch: "main"
 
