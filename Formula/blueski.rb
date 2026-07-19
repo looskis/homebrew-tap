@@ -1,8 +1,8 @@
 class Blueski < Formula
   desc "AppleScript-only macOS Messages send/receive daemon"
   homepage "https://github.com/looskis/blueski"
-  url "https://github.com/looskis/blueski/releases/download/v0.1.3/blueski-0.1.3.tar.gz"
-  sha256 "a7dd7ed355eb4c7938e18a7154c1720fedfb74282a72c02c7da6a61c5bc27f38"
+  url "https://github.com/looskis/blueski/releases/download/v0.1.4/blueski-0.1.4.tar.gz"
+  sha256 "ebcb2e7189146f9725aee448ec51fb02f6192246a379099856cc80becfe83b6f"
   license "MIT"
   head "https://github.com/looskis/blueski.git", branch: "main"
 
@@ -23,23 +23,12 @@ class Blueski < Formula
 
   def caveats
     <<~EOS
-      Before starting Blueski, grant its macOS permissions:
+      Complete Blueski's one-command setup:
         #{opt_bin}/blueski setup
 
       Full Disk Access and Automation are attached to:
         #{opt_prefix}/Blueski.app
-
-      Then start it at login with:
-        brew services start blueski
     EOS
-  end
-
-  service do
-    run [opt_prefix/"Blueski.app/Contents/MacOS/blueski", "run"]
-    keep_alive true
-    log_path var/"log/blueski.log"
-    error_log_path var/"log/blueski.err"
-    environment_variables PATH: std_service_path_env
   end
 
   test do
