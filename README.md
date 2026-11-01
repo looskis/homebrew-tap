@@ -10,6 +10,9 @@ brew services start blueski
 brew install looskis/tap/taski
 taski setup
 brew services start taski
+
+brew install looskis/tap/pingski
+brew services start pingski
 ```
 
 Formula sources live in the individual project repositories and are copied
